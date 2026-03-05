@@ -1,19 +1,16 @@
 class Wiredoor < Formula
   desc "Wiredoor CLI"
   homepage "https://github.com/wiredoor/wiredoor-cli"
-  version "1.0.0"
+  version "1.2.0"
   license "Apache-2.0"
   
-  # https://github.com/wiredoor/wiredoor-cli/releases/download/v1.1.4/wiredoor_1.1.4-1_alpine_amd64.apk
   on_macos do
     if Hardware::CPU.arm?
-    #   url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0-1_darwin_arm64.tar.gz"
-      url "file:///Users/dmesa/Downloads/wiredoor_1.0.0_darwin_arm64.tar.gz"
-      sha256 "1d2221945b0cec87d0811785193e3e4323b29f8500e70bd0e6df40b5e53704cd"
+      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0-1_darwin_arm64.tar.gz"
+      sha256 "d0e29ebf1fafc2e720a34cc0137c4112f33be5a4bf6c0c05a27a25b2093737b1"
     else
-    #   url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0-1_darwin_amd64.tar.gz"
-      url "file:///Users/dmesa/Downloads/wiredoor_1.0.0_darwin_amd64.tar.gz"
-      sha256 "b1431bc1ab23ae4b864ff2916a14414beff7ab121397dd50217b5bace2f6242d"
+      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0-1_darwin_amd64.tar.gz"
+      sha256 "d0e29ebf1fafc2e720a34cc0137c4112f33be5a4bf6c0c05a27a25b2093737b1"
     end
   end
 

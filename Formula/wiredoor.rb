@@ -4,7 +4,6 @@ class Wiredoor < Formula
   version "1.2.0"
   license "Apache-2.0"
 
-  depends_on :macos => :mojave
   depends_on "wireguard-tools"
 
   on_macos do

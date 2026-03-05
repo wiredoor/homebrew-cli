@@ -4,6 +4,9 @@ class Wiredoor < Formula
   version "1.2.0"
   license "Apache-2.0"
 
+  depends_on :macos => :mojave
+  depends_on "wireguard-tools"
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0-1_darwin_arm64.tar.gz"
@@ -14,11 +17,8 @@ class Wiredoor < Formula
     end
   end
 
-  depends_on "wireguard-tools"
-
   def install
     bin.install "wiredoor"
-    # completions/manpages:
     man1.install Dir["man/*.1.gz"] if File.exist?("man/wiredoor.1.gz")
     bash_completion.install "completions/wiredoor.bash" if File.exist?("completions/wiredoor.bash")
     zsh_completion.install  "completions/_wiredoor" if File.exist?("completions/_wiredoor")

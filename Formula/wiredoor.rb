@@ -1,7 +1,6 @@
 class Wiredoor < Formula
   desc "Command-line client for managing Wiredoor"
   homepage "https://github.com/wiredoor/wiredoor-cli"
-  version "1.2.3"
   license "Apache-2.0"
 
   depends_on "wireguard-tools"

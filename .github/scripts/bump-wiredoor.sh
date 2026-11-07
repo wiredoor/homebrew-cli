@@ -37,10 +37,8 @@ for target in "${TARGETS[@]}"; do
   echo "${target}: ${sha}"
 done
 
-sed -i -E "s/^(  version )\"[^\"]+\"/\1\"${VERSION}\"/" "$FORMULA"
-
-# Sanity check: every url line and the version line must reference the new version.
-expected=$(( ${#TARGETS[@]} + 1 ))
+# Sanity check: every url line must reference the new version.
+expected=${#TARGETS[@]}
 actual="$(grep -cF "${VERSION}" "$FORMULA")"
 if [[ "$actual" -ne "$expected" ]]; then
   echo "expected ${expected} references to ${VERSION} in formula, found ${actual}" >&2

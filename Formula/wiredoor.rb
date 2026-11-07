@@ -1,28 +1,28 @@
 class Wiredoor < Formula
   desc "Command-line client for managing Wiredoor"
   homepage "https://github.com/wiredoor/wiredoor-cli"
-  version "1.2.0"
+  version "1.2.3"
   license "Apache-2.0"
 
   depends_on "wireguard-tools"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0_darwin_arm64.tar.gz"
-      sha256 "65a8250f633ecc87a28e413c70e7602d3ddde3272c5b0e2553c795b730794ad0"
+      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.3/wiredoor_1.2.3_darwin_arm64.tar.gz"
+      sha256 "6838499a75ed7adb30e50c65be54a01021fd0e35053c753997046239bbf877e1"
     else
-      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0_darwin_amd64.tar.gz"
-      sha256 "a5917889fdbb23a4e90d9a5c8a9aeada1b22eeb0019b6856b3bdf9c1816751a9"
+      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.3/wiredoor_1.2.3_darwin_amd64.tar.gz"
+      sha256 "58d9faea083a75092049783d12f85c4a7d0925c02a04bb01a61389d3c9aa0866"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0_linux_arm64.tar.gz"
-      sha256 "ef988485308baf5c7b571a2037f8234a07d31cc2ef6aa704c93be5ce5b8d85f8"
+      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.3/wiredoor_1.2.3_linux_arm64.tar.gz"
+      sha256 "7a4d5c4d69808c5a66c38163f17ab8f83fb280a627e5e51c5d4918c233a18b51"
     else
-      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.0/wiredoor_1.2.0_linux_amd64.tar.gz"
-      sha256 "910780b22adcdd2cb6fe3c17ada067eacd65ad7150bd3adb7fde55dbcbb2ca66"
+      url "https://github.com/wiredoor/wiredoor-cli/releases/download/v1.2.3/wiredoor_1.2.3_linux_amd64.tar.gz"
+      sha256 "4d6060589bef359ceb0a517ea1f7d2b94967a323a9be30903642d1b8a87de4de"
     end
   end
 
